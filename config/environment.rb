@@ -6,5 +6,5 @@ Mthr::Application.initialize!
 
 
 # Whenever configure
-config.gem 'whenever', :lib => false, :source => 'http://gems.github.com'
+# config.gem 'whenever', :lib => false, :source => 'http://gems.github.com'
 
