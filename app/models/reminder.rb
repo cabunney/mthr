@@ -12,6 +12,8 @@ class Reminder < ActiveRecord::Base
 		@current_time = Time.zone.now
 		if (@current_time.hour > 12) 
 			@temp_hour = @current_time.hour - 12
+		elsif (@current_time.hour==0)
+			@temp_hour = 12
 		else
 			@temp_hour = @current_time.hour
 		end
