@@ -8,7 +8,8 @@ class Reminder < ActiveRecord::Base
 	
 
 	def self.send_messages
-		@current_time = Time.now
+		Time.zone = 'Pacific Time (US & Canada)' 
+		@current_time = Time.zone.now
 		if (@current_time.hour > 12) 
 			@temp_hour = @current_time.hour - 12
 		else
