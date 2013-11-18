@@ -15,7 +15,7 @@ class Reminder < ActiveRecord::Base
 			@temp_hour = @current_time.hour
 		end
 		@temp_min = (@current_time.min/10)*10
-		@message=  Reminder.where(["hour is ?", @temp_hour]).where(["minute is ?", @temp_min]).where(:period => @current_time.strftime("%p").downcase);
+		@message=  Reminder.where(:hour=>@temp_hour).where(:minute=>@temp.min).where(:period => @current_time.strftime("%p").downcase);
 		twilio_sid = "AC9607ec55d6a76b9fcfc936410fb89307"
       	twilio_token = "baafdb5273486a8a22d5c4e4518dc2d7"
       	twilio_phone_number = "+14124046650"
