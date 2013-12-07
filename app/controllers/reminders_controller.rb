@@ -10,32 +10,10 @@ class RemindersController < ApplicationController
     @to = @reminder.to;
 
     if @reminder.save
-      # twilio_sid = "AC9607ec55d6a76b9fcfc936410fb89307"
-      # twilio_token = "baafdb5273486a8a22d5c4e4518dc2d7"
-      # twilio_phone_number = "+14124046650"
-
-      # @client = Twilio::REST::Client.new twilio_sid, twilio_token
- 
-      # @client.account.sms.messages.create(
-      #     :body => @body,
-      #     :to => @to,
-      #     :from => twilio_phone_number
-      # )
       redirect_to root_url, :flash => { :success => "Message Stored"}
     else
       render 'new'
-    end
-
-  	
- 
-  end
-
-  
-
-
-
-  def confirm
-
+    end 
   end
 
   private 

@@ -2,7 +2,7 @@ Mthr::Application.routes.draw do
 
   root 'reminders#new'
   resources :reminders
-  match '/write',  to: 'reminders#new',            via: 'get'
+  match '/write',  to: 'reminders#new', via: 'get'
   # match '/create', to: 'reminders#create', via: 'get'
   match '/confirm', to: 'reminders#confirm', via: 'get'
   

@@ -1,3 +1,31 @@
 // Place all the styles related to the Reminders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#hero-img {
+	background:image-url("feet.jpg")no-repeat;
+	background-position:center;
+	// background-size:100% auto;
+	background-size:cover;
+	background-position:center top;
+	// background-color:#f05250;
+}
+
+h1 {
+	text-align:center;
+	margin-top:18%;
+	color:white;
+	font-family: 'Raleway', sans-serif;
+	font-weight:200;
+	font-size:10rem;
+	margin-bottom:0px;
+}
+
+h2 {
+	text-align:center;
+	
+	color:white;
+	font-family: 'Raleway', sans-serif;
+	font-weight:200;
+	font-size:1.2rem;
+}

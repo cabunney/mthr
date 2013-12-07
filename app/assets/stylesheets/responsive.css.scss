@@ -1,0 +1,58 @@
+/*Resposive Classes*/
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,700);
+
+
+html {
+	width:100%;
+	padding:0px;
+	margin:0px;
+	font-size:14px;
+	height:100%;
+}
+
+body {
+	width:100%;
+	padding:0px;
+	margin:0px;
+	height:100%;
+}
+
+.container {
+	width:100%;
+	// padding:10px;
+	height:100%;
+
+}
+
+.row {
+	width:100%;
+}
+
+.span12 {
+	width:100%;
+	display:inline-block;
+}
+
+.span6 {
+	width:48%;
+	margin-left:auto;
+	margin-right:auto;
+	display:inline-block;
+}
+
+.span2 {
+	width:16%;
+	margin-left:auto;
+	margin-right:auto;
+	display:inline-block;
+}
+
+.text-center {
+	text-align:center;
+}
+
+#reminder-create-form {
+	margin-top:60px;
+}
+

@@ -8,7 +8,40 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require responsive.css.scss
- *= require_self
- *= require_tree .
+
+
  */
+
+#hero-img {
+  background: url(/images/feet.jpg) no-repeat; }
+/*Resposive Classes*/
+html {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  height: 100%; }
+
+body {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  height: 100%; }
+
+.container {
+  width: 100%;
+  padding: 10px;
+  height: 100%; }
+
+.row {
+  width: 100%; }
+
+.span12 {
+  width: 100%;
+  display: inline-block; }
+
+.span6 {
+  width: 48%;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block; }

@@ -1,45 +1,62 @@
 <% provide(:title, 'Write') %>
+<div class='container' id="hero-img">
+	<div class="row">
+		<div class="span12">
+			<% @reminder.errors.full_messages.each do |msg| %>
+			  <p><%= msg %></p>
+			<% end %>
+		</div>
+	</div>
+	<div>
+		<h1>Mthr</h1>
+		<h2>Send daily text reminders for the important things in your life. And make sure you never forget again.</h2>
+	</div>
+	<div class="row" id="reminder-create-form">
+		<div class='span12'>
+		<%= form_for(@reminder) do |f| %>
+			<div class="row">
+				<div class="span2">
+					<%= f.label :name %>
+					<%= f.text_field :name %>
+				</div>
+				<div class="span2">
+					<%= f.label :to %>
+					<%= f.text_field :to %>
+				</div>
+				<div class="span2">
+					<%= f.label :text %>
+					<%= f.text_field :text %>
+				</div>
+				<div class="span2">
+					<%= f.label :hour %>
+					<%= f.select(:hour, [['1', 1], ['2', 2],['3', 3], ['4', 4], ['5', 5], ['6', 6], ['7', 7], ['8', 8], ['9', 9], ['10', 10], ['11', 11], ['12', 12]]) %>
+				</div>
+				<div class="span2">
+					<%= f.label :minute %>
+					<%= f.select(:minute, [['00', 00], ['30', 30]]) %>
+				</div>
+				<div class="span2">
+					<%= f.label :period %>
+					<%= f.select(:period, [['am', 'am'], ['pm', 'pm']]) %>
+				</div>
+			</div>
+			<div class="row">
+				<div class="text-center span12">
+						<%= f.submit "Send" %>
+				</div>
+			</div>
+		
 
-<div>
-<% @reminder.errors.full_messages.each do |msg| %>
-  <p><%= msg %></p>
-<% end %>
+		
+
+		
+
+		
+
+		<% end %>
+	</div>
+
+
+	</div>
+
 </div>
-
-<div>
-
-<%= form_for(@reminder) do |f| %>
-
-	<%= f.label :name %>
-	<%= f.text_field :name %>
-
-	<%= f.label :to %>
-	<%= f.text_field :to %>
-
-	<%= f.label :text %>
-	<%= f.text_field :text %>
-
-	<%= f.label :hour %>
-	<%= f.select(:hour, [['1', 1], ['2', 2],['3', 3], ['4', 4], ['5', 5], ['6', 6], ['7', 7], ['8', 8], ['9', 9], ['10', 10], ['11', 11], ['12', 12]]) %>
-
-	<%= f.label :minute %>
-	<%= f.select(:minute, [['00', 00], ['10', 10],['20', 20], ['30', 30], ['40', 40], ['50', 50]]) %>
-
-	<%= f.label :period %>
-	<%= f.select(:period, [['am', 'am'], ['pm', 'pm']]) %>
-
-	<%= f.submit "Send" %>
-<% end %>
-
-</div>
-
-<!-- 
-<%= form_tag("../reminders/create", method: "get") do %>
-<%= label_tag(:text, "Text:") %>
-<%= text_field_tag(:text) %>
-<%= select_tag(:who, options_for_select([['Coulton','7246780241'],['Nikki', '9518375005']])) %>
-<%= submit_tag("Send") %> 
-<% end %>
--->
-
-
